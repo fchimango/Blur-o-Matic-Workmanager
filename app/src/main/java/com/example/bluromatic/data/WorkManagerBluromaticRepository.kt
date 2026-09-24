@@ -18,6 +18,7 @@ package com.example.bluromatic.data
 
 import android.content.Context
 import android.net.Uri
+import androidx.work.Constraints
 import androidx.work.Data
 import androidx.work.OneTimeWorkRequest
 import androidx.work.OneTimeWorkRequestBuilder
@@ -44,8 +45,14 @@ class WorkManagerBluromaticRepository(context: Context) : BluromaticRepository {
      */
 
     override fun applyBlur(blurLevel: Int) {
+        val constraints = Constraints.Builder()
+            .setRequiresBatteryNotLow(true)
+            .build()
+
         val blurBuilder = OneTimeWorkRequestBuilder<BlurWorker>()
-        blurBuilder.setInputData(createInputDataForWorkRequest(blurLevel, imageUri))
+            .setInputData(createInputDataForWorkRequest(blurLevel, imageUri))
+            .setConstraints(constraints)
+
         workManager.enqueue(blurBuilder.build())
     }
 
