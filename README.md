@@ -23,4 +23,11 @@ https://youtu.be/9CJgQ4uXROM?si=OwaGHDtNMxyCg8Lz
 Resultado: **9 de 10**.
 
 ![Resultado do quiz](quiz/resultado.png)
-![Respostas do quiz](quiz/respostas.png)
+
+### Respostas assinaladas
+![Respostas 1](quiz/respostas1.png)
+![Respostas 2](quiz/respostas2.png)
+![Respostas 3](quiz/respostas3.png)
+![Respostas 4](quiz/respostas4.png)
+![Respostas 5](quiz/respostas5.png)
+![Respostas 6](quiz/respostas6.png)
